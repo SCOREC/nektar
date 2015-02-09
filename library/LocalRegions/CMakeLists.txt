@@ -25,7 +25,6 @@ Expansion2D.h
 Expansion3D.h
 HexExp.h
 LinSys.hpp
-#LocalRegions.h
 LocalRegions.hpp
 LocalRegionsDeclspec.h
 MatrixKey.h
@@ -39,6 +38,32 @@ SegExp.h
 TetExp.h
 TriExp.h
 )
+
+# rpi libraries 
+SET(PUMI_INSTALL_DIR
+/lore/qlu/scorec_software_dev
+)
+
+SET(PUMI_LIBS
+${PUMI_INSTALL_DIR}/lib/libcurved_meshadapt_nektarpp.a
+${PUMI_INSTALL_DIR}/lib/libadv_loop_base.a
+${PUMI_INSTALL_DIR}/lib/libmeshadapt.a
+${PUMI_INSTALL_DIR}/lib/libpumi_geom_meshmodel.a
+${PUMI_INSTALL_DIR}/lib/libapf_pumi.a
+-L${PUMI_INSTALL_DIR}/lib/ -lpumi_mesh
+/lore/qlu/packages/lib/libzoltan.a
+/lore/qlu/packages/lib/libparmetis.a
+/lore/qlu/packages/lib/libmetis.a
+/lore/qlu/packages/nektar++-3.4.0/ThirdParty/dist/lib/libmetis.a
+${PUMI_INSTALL_DIR}/lib/libpumi_geom_parasolid.a
+${PUMI_INSTALL_DIR}/lib/libpumi_geom.a
+${PUMI_INSTALL_DIR}/lib/libpumi_util.a
+${PUMI_INSTALL_DIR}/lib/libapf.a
+${PUMI_INSTALL_DIR}/lib/libpcu.a
+/usr/local/parasolid/17.0/shared_object/libpskernel.so
+)
+
+INCLUDE_DIRECTORIES( ${PUMI_INSTALL_DIR}/include /lore/qlu/scorec_software_dev/curved_meshadapt_omega3p)
 
 
 ADD_DEFINITIONS(-DLOCAL_REGIONS_EXPORTS)
@@ -55,6 +80,7 @@ TARGET_LINK_LIBRARIES(LocalRegions
         ${Boost_PROGRAM_OPTIONS_LIBRARY}
         ${Boost_SYSTEM_LIBRARY}
         ${ZLIB_LIBRARY}
+        ${PUMI_LIBS}
 	)
 SET_LAPACK_LINK_LIBRARIES(LocalRegions)
 

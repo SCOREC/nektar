@@ -55,6 +55,9 @@
 #include <SpatialDomains/MeshGraph2D.h>
 #include <SpatialDomains/MeshGraph3D.h>
 
+#include <SpatialDomains/PUMIMeshGraph2D.h>
+#include <SpatialDomains/PUMIMeshGraph3D.h>
+
 // These are required for the Write(...) and Import(...) functions.
 #include <boost/archive/iterators/base64_from_binary.hpp>
 #include <boost/archive/iterators/binary_from_base64.hpp>
@@ -153,13 +156,13 @@ namespace Nektar
             case 1:
                 returnval = MemoryManager<MeshGraph1D>::AllocateSharedPtr(pSession,rng);
                 break;
-
+            // Change MeshGraph to PUMIMeshGraph
             case 2:
-                returnval = MemoryManager<MeshGraph2D>::AllocateSharedPtr(pSession,rng);
+                returnval = MemoryManager<PUMIMeshGraph2D>::AllocateSharedPtr(pSession,rng);
                 break;
 
             case 3:
-                returnval = MemoryManager<MeshGraph3D>::AllocateSharedPtr(pSession,rng);
+                returnval = MemoryManager<PUMIMeshGraph3D>::AllocateSharedPtr(pSession,rng);
                 break;
 
             default:
