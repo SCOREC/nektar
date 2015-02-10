@@ -9,12 +9,12 @@ export KINVIS=0.025
 export GEOMETRY=3DKovaGeom.xmt_txt
 export PUMIMESH=3DKovaPumiMesh.sms
 
-SOLVER=../../../../builds/dist/bin/IncNavierStokesSolver
+SOLVER=../../builds/dist/bin/IncNavierStokesSolver
 NODES=(4)
 for N in ${NODES[@]}; do 
 	export NUMNODES=$N
 	echo -n "Running $N ..."
-	envsubst < xml_template.xml > m${N}.xml
+	envsubst < template.xml > m${N}.xml
 	$SOLVER m${N}.xml &> m${N}.log
 	echo " done"
 done
