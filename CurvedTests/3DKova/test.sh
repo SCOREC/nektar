@@ -10,9 +10,9 @@ export GEOMETRY=3DKovaGeom.xmt_txt
 export PUMIMESH=3DKovaPumiMesh.sms
 
 SOLVER=../../builds/dist/bin/IncNavierStokesSolver
-NODES=(4)
-for N in ${NODES[@]}; do 
-	export NUMNODES=$N
+MODES=(4 5 6 7 8)
+for N in ${MODES[@]}; do 
+	export NUMMODES=$N
 	echo -n "Running $N ..."
 	envsubst < template.xml > m${N}.xml
 	$SOLVER m${N}.xml &> m${N}.log

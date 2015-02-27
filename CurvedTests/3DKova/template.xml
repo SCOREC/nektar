@@ -4,7 +4,7 @@
     xsi:noNamespaceSchemaLocation="http://www.nektar.info/schema/nektar.xsd">
 
     <EXPANSIONS>
-        <E COMPOSITE="C[0]" NUMMODES="$NUMNODES" FIELDS="u,v,w,p" TYPE="MODIFIED" />
+        <E COMPOSITE="C[0]" NUMMODES="$NUMMODES" FIELDS="u,v,w,p" TYPE="MODIFIED" />
     </EXPANSIONS>
 
     <CONDITIONS>

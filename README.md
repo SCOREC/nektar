@@ -1,36 +1,24 @@
-Files LocalRegions/CMakeLists.txt and LocalRegions-org/CMakeLists.txt differ
+## Integration of CurvedMeshing into Nektar++ 3.4.0
 
-Files LocalRegions/Expansion.cpp and LocalRegions-org/Expansion.cpp differ
+### Files that differ ###
+* LocalRegions/CMakeLists.txt
+* LocalRegions/Expansion.cpp
+* SpatialDomains/CMakeLists.txt
+* SpatialDomains/GeomFactors.h
+* SpatialDomains/MeshGraph3D.h
+* SpatialDomains/MeshGraph.cpp
 
-Files SpatialDomains/CMakeLists.txt and SpatialDomains-org/CMakeLists.txt differ
-
-Files SpatialDomains/GeomFactors.h and SpatialDomains-org/GeomFactors.h differ
-
-Files SpatialDomains/MeshGraph3D.h and SpatialDomains-org/MeshGraph3D.h differ
-
-Files SpatialDomains/MeshGraph.cpp and SpatialDomains-org/MeshGraph.cpp differ
-
-Only in SpatialDomains: CrvSegGeom.cpp
-
-Only in SpatialDomains: CrvSegGeom.h
-
-Only in SpatialDomains: CrvTetGeom.cpp
-
-Only in SpatialDomains: CrvTetGeom.h
-
-Only in SpatialDomains: CrvTriGeom.cpp
-
-Only in SpatialDomains: CrvTriGeom.h
-
-Only in SpatialDomains: GeomFactorsPUMI.cpp
-
-Only in SpatialDomains: GeomFactorsPUMI.h
-
-Only in SpatialDomains: PUMIMeshGraph2D.cpp
-
-Only in SpatialDomains: PUMIMeshGraph2D.h
-
-Only in SpatialDomains: PUMIMeshGraph3D.cpp
-
-Only in SpatialDomains: PUMIMeshGraph3D.h
+### Unique Files ###
+* SpatialDomains/CrvSegGeom.cpp
+* SpatialDomains/CrvSegGeom.h
+* SpatialDomains/CrvTetGeom.cpp
+* SpatialDomains/CrvTetGeom.h
+* SpatialDomains/CrvTriGeom.cpp
+* SpatialDomains/CrvTriGeom.h
+* SpatialDomains/GeomFactorsPUMI.cpp
+* SpatialDomains/GeomFactorsPUMI.h
+* SpatialDomains/PUMIMeshGraph2D.cpp
+* SpatialDomains/PUMIMeshGraph2D.h
+* SpatialDomains/PUMIMeshGraph3D.cpp
+* SpatialDomains/PUMIMeshGraph3D.h
 
